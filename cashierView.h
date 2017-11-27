@@ -2,7 +2,7 @@
 #define _CASHIERVIEW_H_
 #include "order.h"
 
-class cashierView
+class cashierView: public Observable
 {
   public:
     void displayRunningTotal(order running);
