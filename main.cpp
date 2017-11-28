@@ -19,10 +19,12 @@ int main()
   order current;
   keypadController keypad(&current);
   registerController ticket(&inventory,&current);
-  ticket.processOrder();
+ 
   
-  current.addObserver(keypad);
-  current.addObserver(ticket);
+  current.addObserver(&keypad);
+  current.addObserver(&ticket);
+  
+   ticket.processOrder();
 
   return 0;
 }
